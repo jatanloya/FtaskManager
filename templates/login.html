@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% from 'render_field.html' import render_field %}
+
+{% block content %}
+Log In Form
+<form method="POST" action="" class="form">
+    {{ form.hidden_tag() }}
+    {% for field in form %}
+        {{render_field(field)}}
+    {% endfor %}
+    <div><button type="submit" id="submit">Log In</button></div>
+</form>
+    <a href="/register">Not registered yet? Sign Up here</a>
+{% endblock %}
